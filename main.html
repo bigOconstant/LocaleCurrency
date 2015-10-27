@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js">
+    </script>
+
+<title>Game Of Currencies</title>
+</head>
+
+<script type="text/javascript" src="node_modules/angular-dynamic-locale/tmhDynamicLocale.min.js"> </script>
+<script type="text/javascript" src="cur.js"> </script>
+
+<body style="font:15px Verdana;">
+
+   <h1 id="header">Currency Example </h1>
+
+    <div ng-app="curApp" ng-controller="curController">
+      <br/>
+        <select ng-model="country">
+            <option>USA</option>
+            <option>German</option>
+	    <option>French</option>
+            <option>Arabic</option>
+	    <option>Japanese</option>
+	    <option>Korean</option>
+	    <option>Japanese</option>
+        </select>
+        <br>
+        <br>
+        <p>
+            <label>Enter a number</label>
+            <input type="text" ng-model="cur" />
+        </p>
+        <p>{{ result | currency }}</p>
+    </div>
+</body>
+</html>
